@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .boxP{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .box{
+            
+            height: 100px;
+            width: 100px;
+            position: relative;
+            background-color: rgb(0, 255, 221);
+            animation-name: volcanus;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            /* animation-delay: 2s; */
+            animation-direction: reverse;
+            border-style: solid;
+            border-color: yellow;
+            border-width: 30px;
+            border-radius: 100%;
+        
+        }
+
+        @keyframes volcanus{
+            /* from{background-color: rgb(255, 0, 0);}
+            to{background-color: yellow;
+                height: 150px;
+                width: 150px; 
+            } */
+
+            0%{
+                background-color: red;
+                top: 0px; left: 0px;
+            border-color: yellow;
+                
+            }
+
+            25%{
+                background-color: yellow;
+            left: 200px; top: 0px;
+            border-color: rgb(225, 0, 255);
+        }
+
+            50%{
+                background-color: green;
+           left: 200px; top:200px;
+            border-color: rgb(255, 0, 17);
+           
+        }
+
+            75%{
+                background-color: blue;
+            left: 0px; top: 200px;
+            border-color: rgb(123, 0, 255);
+        }
+
+            100%{
+                background-color: aqua;
+            left: 0px; top: 0px;
+            border-color: rgb(97, 124, 125);
+            
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="boxP">
+
+        <div class="box"></div>
+    </div>
+</body>
+</html>
