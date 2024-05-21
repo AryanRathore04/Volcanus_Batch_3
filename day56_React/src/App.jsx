@@ -2,9 +2,16 @@ import React from 'react'
 
 const App = () => {
   return (
+    <>
     <div>
-      <h1>Superman</h1>
+      <h1>Hello</h1>
     </div>
+
+    <div>
+      <h1>Prashant</h1>
+    </div>
+    </>
+    
   )
 }
 
