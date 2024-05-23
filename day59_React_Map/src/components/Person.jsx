@@ -1,22 +1,9 @@
-import React from "react";
-import "./person.css";
+import React from 'react'
 
-const Person = (props) => {
-  
+const Person = () => {
   return (
-    <div className="main">
-      {/* <h1>revision</h1> */}
-      {props.name}
-      <br />
-      {props.Sname}
-      <br />
-      {props.salary}
-      <br />
-      {props.age}
-      <br />
-      {props.id}
-    </div>
-  );
-};
+    <div>Person</div>
+  )
+}
 
-export default Person;
+export default Person
