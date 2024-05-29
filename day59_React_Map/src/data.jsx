@@ -10,7 +10,7 @@ export const data = [
     category: "london",
     imgsrc:
       "https://images.pexels.com/photos/575362/pexels-photo-575362.jpeg?auto=compress&cs=tinysrgb&h=350",
-  },
+  }, 
   {
     id: 3,
     category: "paris",

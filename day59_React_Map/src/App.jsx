@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { data } from "./data";
+import { data } from "./data";   i]'
+'
 
 const App = () => {
   const [images, setImages] = useState(data);
@@ -9,7 +10,6 @@ const App = () => {
     setImages(result);
     console.log("image result = ", result);
   };
-
   return (
     <>
       <button onClick={() => filterbyCategory("london")}>London</button>
