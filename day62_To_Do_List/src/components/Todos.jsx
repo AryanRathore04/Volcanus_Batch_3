@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-const Todos = ({todos}) => {
-  
+
+const Todos = ({ todos, deleteTodo }) => {
   return (
     <div className="container">
       {todos.map((todo) => (
         <div key={todo.id} className=" bg-dark p-3 my-3 text-center">
           <h1>{todo.title}</h1>
           <p>{todo.description}</p>
+          <h3>{todo.id}</h3>
           <div>
             <button className="btn btn-warning mx-2">Edit</button>
-            <button className="btn btn-danger">Delete</button>
+            <button
+              className="btn btn-danger"
+              onClick={() => deleteTodo(todo.id)}
+            >
+              Delete
+            </button>
           </div>
         </div>
       ))}

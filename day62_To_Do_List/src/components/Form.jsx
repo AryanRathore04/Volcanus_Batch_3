@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const Form = ({ addTodo }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -15,27 +14,23 @@ const Form = ({ addTodo }) => {
 
   return (
     <>
-   
-      <form onSubmit={submitHandler}>
-        title :{" "}
-        <input
-          value={title}
-          type="text"
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <br />
-        <br />
-        description:{" "}
-        <input
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <br />
-        <br />
-        {/* <input type="submit" value="submit" /> */}
-        <button className="btn btn-warning">Submit</button>
-      </form>
+      <div className="container text-center my-5">
+        <form onSubmit={submitHandler}>
+          title :{" "}
+          <input
+            value={title}
+            type="text"
+            onChange={(e) => setTitle(e.target.value)}
+          />{" "}
+          description:{" "}
+          <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <button className="btn btn-warning mx-3">Submit</button>
+        </form>
+      </div>
     </>
   );
 };

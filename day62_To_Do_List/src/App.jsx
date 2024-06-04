@@ -27,21 +27,20 @@ const App = () => {
     setTodos([...todos, obj]);
   };
 
+
+  const deleteTodo = (id) =>{
+   const filterTodo = todos.filter((item)=>item.id != id)
+   console.log(filterTodo);
+   setTodos(filterTodo)
+  }
+
+
+
   return (
     <>
-    {/* <Child /> */}
       <Form addTodo={addTodo} />
       <div>
-        {/* <div
-          className="btn btn-warning"
-          onClick={() =>
-            addTodo(6, "infinity war", "one of the best marvel movie")
-          }
-        >
-          AddTodo
-        </div> */}
-
-        <Todos todos={todos} />
+        <Todos todos={todos} deleteTodo={deleteTodo} />
       </div>
     </>
   );
