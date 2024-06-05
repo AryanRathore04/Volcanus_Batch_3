@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Form = ({ addTodo }) => {
+const Form = ({ addTodo, id, todos }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  useEffect(() => {
+    const temp = todos.filter((item) => item.id == id);
+    console.log("edited data = ", temp);
+
+    setTitle(temp[0]?.title);
+    setDescription(temp[0]?.description);
+  }, [id]);
+
   const submitHandler = (e) => {
     e.preventDefault();
-    addTodo(Math.random(), title, description);
-    alert(`Your To do has been added...`);
-    setTitle("");
-    setDescription("");
+    if (id != "") {
+      addTodo(id, title, description);
+      alert(`Your To do has been updated...`);
+      setTitle("");
+      setDescription("");
+    } else {
+      addTodo(Math.random(), title, description);
+      alert(`Your To do has been added...`);
+      setTitle("");
+      setDescription("");
+    }
   };
 
   return (
@@ -28,7 +43,10 @@ const Form = ({ addTodo }) => {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <button className="btn btn-warning mx-3">Submit</button>
+          {id != "" && <button className="btn btn-warning mx-3">Edit</button>}
+          {id === "" && (
+            <button className="btn btn-warning mx-3">Submit</button>
+          )}
         </form>
       </div>
     </>
