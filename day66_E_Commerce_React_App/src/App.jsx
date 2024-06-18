@@ -11,8 +11,13 @@ const App = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
-      <Products data={data} />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Products data={data} />} />
+          <Route path="/product/:id" element={<Product_Detail />} />
+        </Routes>
+      </Router>
     </>
   );
 };

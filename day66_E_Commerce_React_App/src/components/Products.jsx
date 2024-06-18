@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Products = ({ data }) => {
+
   return (
     <>
       <div className="container">
@@ -11,7 +13,10 @@ const Products = ({ data }) => {
                 className="card bg-dark text-light"
                 style={{ width: "18rem" }}
               >
-                <div className="d-flex justify-content-center align-items-center p-3">
+                <Link
+                  to={`/product/${product.id}`}
+                  className="d-flex justify-content-center align-items-center p-3"
+                >
                   <img
                     src={product.imgSrc}
                     className="card-img-top"
@@ -23,13 +28,13 @@ const Products = ({ data }) => {
                       border: "2px solid yellow",
                     }}
                   />
-                </div>
+                </Link>
                 <div className="card-body text-center">
                   <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text">
-                   {product.description}
-                  </p>
-                  <button className="btn btn-primary mx-3">{product.price}</button>
+                  <p className="card-text">{product.description}</p>
+                  <button className="btn btn-primary mx-3">
+                    {product.price}
+                  </button>
                   <button className="btn btn-warning">Add To Cart</button>
                 </div>
               </div>
