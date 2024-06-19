@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Products = ({ data }) => {
-
+const Products = ({ data, addToCart }) => {
   return (
     <>
       <div className="container">
-        <div className="row">
+        <div className="row d-flex justify-content-center align-content-center">
           {data.map((product) => (
-            <div key={product.id} className="col-md-4 my-3">
+            <div
+              key={product.id}
+              className="col-md-4 my-3 d-flex justify-content-center align-content-center"
+            >
               <div
                 className="card bg-dark text-light"
                 style={{ width: "18rem" }}
@@ -35,7 +37,12 @@ const Products = ({ data }) => {
                   <button className="btn btn-primary mx-3">
                     {product.price}
                   </button>
-                  <button className="btn btn-warning">Add To Cart</button>
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => addToCart(product)}
+                  >
+                    Add To Cart
+                  </button>
                 </div>
               </div>
             </div>

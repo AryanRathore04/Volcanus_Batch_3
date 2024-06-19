@@ -20,7 +20,7 @@ const Product_Detail = () => {
           }}
         />
       </div>
-      <div className="desc">
+      <div className="desc text-center">
         <h1>{singleProduct[0].title}</h1> <p>{singleProduct[0].description}</p>
         <button className="btn btn-danger mx-3">Buy Now</button>
         <button className="btn btn-warning">Add To Cart</button>
