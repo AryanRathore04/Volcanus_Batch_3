@@ -16,6 +16,7 @@ const App = () => {
     setCart([...cart, product]);
     console.log("my cart", cart);
   };
+  
   return (
     <>
       <Router>
@@ -27,7 +28,7 @@ const App = () => {
           />
           <Route path="/product/:id" element={<Product_Detail />} />
           <Route path="/search/:term" element={<Search_Product />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </Router>
     </>
