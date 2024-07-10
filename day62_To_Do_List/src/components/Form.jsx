@@ -10,7 +10,7 @@ const Form = ({ addTodo, id, todos }) => {
 
     setTitle(temp[0]?.title);
     setDescription(temp[0]?.description);
-  }, [id]);
+  }, [id]); 
 
   const submitHandler = (e) => {
     e.preventDefault();
