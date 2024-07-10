@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product_Detail from "./pages/Product_Detail";
 import Navbar from "./components/Navbar";
 
+// useState, useEffect, [useParams, useLocation, useNavigate]  useContext, Redux - [useSelector, useDispatch]
+
 const App = () => {
   return (
     <Router>
